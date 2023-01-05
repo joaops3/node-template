@@ -1,6 +1,9 @@
 import { Request, Response } from "express";
+import { transporter, sendEmail } from "../libs/mailer";
 import userService from "../services/user.service";
+import dotenv from "dotenv";
 
+dotenv.config();
 export class UserController {
   async create(req: Request, res: Response) {
     await userService.create(req.body);

@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "meu titulo de api",
+    "description": "some description",
+    "version": "1.0.0",
+    "contact": {
+      "email": "@email"
+    }
+  },
+
+  "paths": {
+    "/user": {
+      "post": {
+        "tags": ["user"],
+        "summary": "create user",
+        "description": "vai criar usuario",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                },
+                "example": {
+                  "name": "joao",
+                  "age": "22"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "created" },
+          "500": { "description": "erro" }
+        }
+      }
+    }
+  }
+}

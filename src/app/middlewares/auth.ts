@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import passport, { notAuthorizedJson } from "../config/passport";
+import passport, { notAuthorizedJson } from "../libs/passport";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
